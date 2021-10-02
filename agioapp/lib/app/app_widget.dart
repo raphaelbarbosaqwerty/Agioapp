@@ -8,8 +8,8 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'AgioApp',
-      theme: Atomic.buildTheme(context),
       debugShowCheckedModeBanner: false,
+      theme: Atomic.buildTheme(context),
     ).modular();
   }
 }

@@ -17,6 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends ModularState<HomePage, HomeStore> {
   @override
   Widget build(BuildContext context) {
+    var textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -30,33 +31,49 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
       body: Container(
         padding: EdgeInsets.all(16),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
               children: [
-                Wrap(
-                  spacing: 20,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Profit"),
+                    Padding(
+                      padding: EdgeInsets.only(right: 20),
+                      child: Text("R\$100",
+                          style: textTheme.headline4
+                              ?.copyWith(color: Atomic.profit)),
+                    ),
                     Icon(
-                        Icons.call_made,
+                      Icons.call_made,
                       color: Atomic.profit,
+                      size: 32,
                     )
                   ],
                 ),
-                Wrap(
-                  spacing: 20,
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                      Icons.south_west,
-                      color: Atomic.fever,
+                    Padding(
+                      padding: EdgeInsets.only(right: 20),
+                      child: Icon(
+                        Icons.south_west,
+                        color: Atomic.fever,
+                        size: 32,
+                      ),
                     ),
-                    Text("Loaned")
+                    Text("R\$50",
+                        style:
+                            textTheme.headline4?.copyWith(color: Atomic.fever))
                   ],
                 )
               ],
             ),
-            Text("AAAA"),
+            const SizedBox(height: 100),
+            Text(
+              "Sexo",
+                style: textTheme.headline4
+            )
           ],
         ),
       ),
