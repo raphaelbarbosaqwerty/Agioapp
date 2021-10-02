@@ -1,3 +1,5 @@
+import 'package:agioapp/app/utils/atomic/atomic.dart';
+import 'package:agioapp/app/utils/atomic/atoms/the_button/the_button_widget.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:agioapp/app/modules/login/login_store.dart';
 import 'package:flutter/material.dart';
@@ -28,14 +30,14 @@ class LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 18,
             ),
             Text(
               'Please sign in to your account',
               style: textTheme.bodyText2?.copyWith(),
             ),
             const SizedBox(
-              height: 24,
+              height: 74,
             ),
             TextFormField(
               controller: TextEditingController(),
@@ -63,7 +65,7 @@ class LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(
-              height: 8,
+              height: 24,
             ),
             Align(
               alignment: Alignment.centerRight,
@@ -75,25 +77,49 @@ class LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 80,
             ),
-            SizedBox(
-              width: double.infinity,
-              height: 70,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text('Sign in'),
-              ),
+            TheButtonWidget(
+              child: Text('Sign in'),
+              onPressed: () {},
             ),
             const SizedBox(
               height: 12,
             ),
-            SizedBox(
-              width: double.infinity,
-              height: 70,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text('Sign in'),
+            TheButtonWidget(
+              icon: Image.asset(
+                'assets/images/icons/google.png',
+                height: 24.0,
               ),
+              child: Text(
+                'Sign in with Google',
+                style: textTheme.bodyText1?.copyWith(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              color: Colors.white,
+              onPressed: () {},
             ),
+            const SizedBox(
+              height: 36,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Don´t have an Account? ',
+                  style: textTheme.bodyText1?.copyWith(
+                    fontWeight: FontWeight.w100,
+                  ),
+                ),
+                Text(
+                  'Sign Up',
+                  style: textTheme.bodyText2?.copyWith(
+                    color: Atomic.purple,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
