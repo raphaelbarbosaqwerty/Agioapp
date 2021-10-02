@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1043899481951",
+    "project_id": "agioapp-edae8",
+    "storage_bucket": "agioapp-edae8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043899481951:android:4a5ba2c35e52c40d5440ea",
+        "android_client_info": {
+          "package_name": "com.example.agioapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043899481951-lk8ru6dt6mfr1rbp0jvv0qpn0mr5nn6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl74gMej6uMRcrA0F4V47M0qIAx2H55cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043899481951-lk8ru6dt6mfr1rbp0jvv0qpn0mr5nn6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
