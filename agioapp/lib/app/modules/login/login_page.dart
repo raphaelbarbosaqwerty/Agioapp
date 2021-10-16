@@ -82,7 +82,9 @@ class LoginPageState extends State<LoginPage> {
                 ),
                 TheButtonWidget(
                   child: Text('Sign in'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Modular.to.navigate('/home');
+                  },
                 ),
                 const SizedBox(
                   height: 12,
