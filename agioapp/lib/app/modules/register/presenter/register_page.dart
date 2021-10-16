@@ -1,6 +1,6 @@
 import 'package:agioapp/app/utils/atomic/atoms/the_button/the_button_widget.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:agioapp/app/modules/register/register_store.dart';
+import 'package:agioapp/app/modules/register/presenter/register_store.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {

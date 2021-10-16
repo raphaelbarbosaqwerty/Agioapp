@@ -1,7 +1,7 @@
 import 'package:agioapp/app/utils/atomic/atomic.dart';
 import 'package:agioapp/app/utils/atomic/atoms/the_button/the_button_widget.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:agioapp/app/modules/login/login_store.dart';
+import 'package:agioapp/app/modules/login/presenter/login_store.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {

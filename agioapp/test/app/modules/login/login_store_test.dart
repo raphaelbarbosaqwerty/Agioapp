@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:agioapp/app/modules/login/login_store.dart';
- 
+import 'package:agioapp/app/modules/login/presenter/login_store.dart';
+
 void main() {
   late LoginStore store;
 

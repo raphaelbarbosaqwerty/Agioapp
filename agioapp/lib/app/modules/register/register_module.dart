@@ -1,7 +1,7 @@
-import 'package:agioapp/app/modules/register/register_store.dart';
+import 'package:agioapp/app/modules/register/presenter/register_store.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'register_page.dart';
+import 'presenter/register_page.dart';
 
 class RegisterModule extends Module {
   @override
