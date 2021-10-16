@@ -1,11 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:agioapp/app/modules/register/presenter/register_store.dart';
+import 'package:agioapp/app/modules/loan/presenter/loan_store.dart';
 
 void main() {
-  late RegisterStore store;
+  late LoanStore store;
 
   setUpAll(() {
-    store = RegisterStore();
+    store = LoanStore();
   });
 
   test('increment count', () async {

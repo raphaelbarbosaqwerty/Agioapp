@@ -8,7 +8,7 @@ class Atomic {
   static Color _red = Color(0xFFee786b);
 
   static Color _subtitle = Color(0xFF6b6f77);
-  static Color _formField = Color(0xFF252a34);
+  static Color formField = Color(0xFF252a34);
 
   static ThemeData buildTheme(BuildContext context) {
     return ThemeData(
@@ -18,7 +18,8 @@ class Atomic {
       scaffoldBackgroundColor: _nightBlack,
       primaryColor: _nightBlack, //FF2c2d33
       colorScheme: ThemeData().colorScheme.copyWith(
-            secondary: Colors.red,
+            primary: purple,
+            secondary: purple,
           ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -33,7 +34,7 @@ class Atomic {
         color: _subtitle,
       ),
       inputDecorationTheme: InputDecorationTheme(
-        fillColor: _formField,
+        fillColor: formField,
         contentPadding: EdgeInsets.symmetric(
           horizontal: 24.0,
           vertical: 24.0,
