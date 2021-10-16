@@ -1,3 +1,5 @@
+import 'package:agioapp/app/modules/home/model/balance_data.dart';
+import 'package:agioapp/app/utils/atomic/atomic.dart';
 import 'package:mobx/mobx.dart';
 
 part 'home_store.g.dart';
@@ -21,6 +23,13 @@ abstract class HomeStoreBase with Store {
       "Sexo 2",
       "Sexo 3",
       "Sexo 4"
+    ];
+  }
+  
+  List<BalanceData> getBalanceData() {
+    return [
+      BalanceData("Profit", 100, Atomic.profit),
+      BalanceData("Loaned", 50, Atomic.fever)
     ];
   }
 }

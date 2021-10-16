@@ -1,3 +1,4 @@
+import 'package:agioapp/app/modules/home/balancechart/balance_chart.dart';
 import 'package:agioapp/app/modules/home/list/debt_list.dart';
 import 'package:agioapp/app/utils/atomic/atomic.dart';
 import 'package:flutter/material.dart';
@@ -36,59 +37,27 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
           ),
         ],
       ),
-      body: Container(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          children: [
-            Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 90),
-                    Padding(
-                      padding: EdgeInsets.only(right: 20),
-                      child: Text("R\$100",
-                          style: textTheme.headline4
-                              ?.copyWith(color: Atomic.profit)),
-                    ),
-                    Icon(
-                      Icons.call_made,
-                      color: Atomic.profit,
-                      size: 32,
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 20),
-                      child: Icon(
-                        Icons.south_west,
-                        color: Atomic.fever,
-                        size: 32,
-                      ),
-                    ),
-                    Text("R\$50",
-                        style:
-                            textTheme.headline4?.copyWith(color: Atomic.fever))
-                  ],
-                )
-              ],
-            ),
-            const SizedBox(height: 49),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 4),
-              child: Divider(
-                height: 1,
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            children: [
+              Container(
+                child: BalanceChart(balanceData: store.getBalanceData()),
               ),
-            ),
-            const SizedBox(height: 49),
-            Container(
-              child: DebtList(debts: store.debtList),
-            )
-          ],
+              const SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 4),
+                child: Divider(
+                  height: 1,
+                ),
+              ),
+              const SizedBox(height: 20),
+              Container(
+                child: DebtList(debts: store.debtList),
+              )
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
