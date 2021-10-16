@@ -3,13 +3,15 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Atomic {
-  static Color? _nightBlack = Color(0xFF171821);
+  static Color? _nightBlack = Color(0xFF262734);
   static Color? fever = Color(0xFFee786b);
   static Color? profit = Color(0xFF1fc0a9);
-  static Color _purple = Color(0xFF5568fe);
+  static Color purple = Color(0xFF5568fe);
 
   static Color _subtitle = Color(0xFF6b6f77);
   static Color _formField = Color(0xFF252a34);
+
+  static Color _cardBackground = Color(0xFF343646);
 
   static ThemeData buildTheme(BuildContext context) {
     return ThemeData(
@@ -71,8 +73,15 @@ class Atomic {
         )
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-        backgroundColor: _purple
-      )
+        backgroundColor: purple
+      ),
+      cardTheme: CardTheme(
+        color: _cardBackground,
+        elevation: 2
+      ),
+      dividerTheme: DividerThemeData(
+        color: _subtitle
+      ),
     );
   }
 }

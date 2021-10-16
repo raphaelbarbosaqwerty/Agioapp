@@ -1,3 +1,4 @@
+import 'package:agioapp/app/modules/home/list/debt_list.dart';
 import 'package:agioapp/app/utils/atomic/atomic.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -14,11 +15,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends ModularState<HomePage, HomeStore> {
+  final HomeStore store = Modular.get();
+
   @override
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
+        title: Text(
+          "Balance",
+          style: textTheme.bodyText1
+              ?.copyWith(fontSize: 20, color: Colors.white),
+        ),
+        centerTitle: false,
         elevation: 0,
         actions: [
           Icon(
@@ -36,6 +45,7 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(height: 90),
                     Padding(
                       padding: EdgeInsets.only(right: 20),
                       child: Text("R\$100",
@@ -49,7 +59,6 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                     )
                   ],
                 ),
-                const SizedBox(height: 16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -68,17 +77,23 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                 )
               ],
             ),
-            const SizedBox(height: 100),
-            Text(
-              "Sexo",
-                style: textTheme.headline4
+            const SizedBox(height: 49),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 4),
+              child: Divider(
+                height: 1,
+              ),
+            ),
+            const SizedBox(height: 49),
+            Container(
+              child: DebtList(debts: store.debtList),
             )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          store.increment();
+          print("Sexo");
         },
         child: Icon(Icons.add),
       ),
