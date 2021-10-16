@@ -1,4 +1,5 @@
 import 'package:agioapp/app/modules/loan/loan_module.dart';
+import 'package:agioapp/app/modules/users/users_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import '../home/home_store.dart';
 
@@ -14,5 +15,6 @@ class HomeModule extends Module {
   final List<ModularRoute> routes = [
     ChildRoute(Modular.initialRoute, child: (_, args) => HomePage()),
     ModuleRoute('/loan', module: LoanModule()),
+    ModuleRoute('/users', module: UsersModule()),
   ];
 }
