@@ -3,6 +3,7 @@ import 'package:agioapp/app/modules/register/register_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'modules/home/home_module.dart';
+import 'modules/loan/loan_module.dart';
 
 class AppModule extends Module {
   @override
