@@ -30,6 +30,15 @@ class UsersPageState extends State<UsersPage> {
               child: Card(
                 color: Atomic.formField,
                 child: ListTile(
+                  trailing: IconButton(
+                    icon: Icon(
+                      Icons.edit,
+                      color: Atomic.purple,
+                    ),
+                    onPressed: () {
+                      Modular.to.pushNamed('/home/users/edit', arguments: customer);
+                    },
+                  ),
                   leading: Icon(
                     Icons.person,
                     color: Atomic.purple,
@@ -45,7 +54,7 @@ class UsersPageState extends State<UsersPage> {
                 ),
               ),
               onTap: () {
-                Modular.to.pushNamed('/home/users/edit', arguments: customer);
+                Modular.to.pop(customer);
               },
             );
           },
